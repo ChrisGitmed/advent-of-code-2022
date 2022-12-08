@@ -56,13 +56,11 @@ const getHighestCalories = (data) => {
   // Parse the individual elfs from the master list
   const firstSplit = data.split('\n\n');
 
-  // Parse the calories if each elf into a sub-array
+  // Parse the calories of each elf into a sub-array
   const secondSplit = firstSplit.map((item) => item.split('\n').map((str) => parseInt(str, 10)));
-
-  // Initialize variable to hold max
-  let max = -Infinity;
-
+  
   // For each elf, check if their total is higher than max, if yes, that is the new max
+  let max = -Infinity;
   for (const elf of secondSplit) {
     const sumOfCalories = elf.reduce((a, b) => a + b, 0);
     if (sumOfCalories > max) max = sumOfCalories;

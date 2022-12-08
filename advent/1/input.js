@@ -1,5 +1,4 @@
-module.exports = `
-9524
+module.exports = `9524
 12618
 6755
 2121
