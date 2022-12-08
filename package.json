@@ -1,0 +1,8 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ChrisGitmed/advent-of-code-2022.git",
+  "license": "MIT",
+  "type": "module"
+}
