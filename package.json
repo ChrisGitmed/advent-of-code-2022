@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/ChrisGitmed/advent-of-code-2022.git",
+  "scripts": {
+    "test": "jest"
+  },
   "license": "MIT",
-  "type": "module"
+  "type": "commonjs",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
 }

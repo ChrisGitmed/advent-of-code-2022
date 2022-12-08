@@ -52,9 +52,9 @@
 //
 // Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
-import { inputData } from '../input-data/day-1.js';
+const inputData = require('../input-data/day-1.js');
 
-export const getHighestCalories = (data) => {
+const getHighestCalories = (data) => {
   // Parse the individual elfs from the master list
   const firstSplit = data.split('\n\n');
 
@@ -70,7 +70,9 @@ export const getHighestCalories = (data) => {
     if (sumOfCalories > max) max = sumOfCalories;
   }
   return max;
-}
+};
+
+module.exports = { getHighestCalories };
 
 const answer = getHighestCalories(inputData);
 console.log('answer: ', answer)
