@@ -1,4 +1,4 @@
-export const inputData =`
+module.exports = `
 9524
 12618
 6755
