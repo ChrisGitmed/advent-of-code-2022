@@ -1,8 +1,7 @@
 const { test, expect } = require('@jest/globals');
 
-const { getHighestCalories } = require('./solution-1');
-const { getThreeHighestCalories } = require('./solution-2');
 const inputData = require('./input');
+const { getHighestCalories, getThreeHighestCalories } = require('./solutions');
 
 test('Should return the max amount of calories on one elf.', () => {
   expect(getHighestCalories(inputData)).toBe(73211);
