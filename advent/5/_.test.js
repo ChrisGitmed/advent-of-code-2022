@@ -1,13 +1,12 @@
 const { test, expect } = require('@jest/globals');
 
-const { getTopCratesAfterArrangement } = require('./solutions');
+const { getTopCrates, getTopCratesTwo } = require('./solutions');
 const { inputData } = require('./input');
 
-const testInput = 'move 1 from 1 to 2'
 test('Should return the top crates after arrangement', () => {
-  expect(getTopCratesAfterArrangement(testInput)).toBe('CFHZNPMND');
+  expect(getTopCrates(inputData)).toBe('SPFMVDTZT');
 });
 
-// test('', () => {
-//   expect((inputData)).toBe();
-// });
+test('Should return the top crates after arrangement', () => {
+  expect(getTopCratesTwo(inputData)).toBe('ZFSJBPRFP');
+});
