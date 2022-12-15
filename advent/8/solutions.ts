@@ -13,10 +13,10 @@ const countVisibleTrees = (input) => {
 
   // Loop over each row
   rows.forEach((currentRow, rowNum) => {
-    console.log('currentRow: ', currentRow)
+    // console.log('currentRow: ', currentRow)
     for (let treeIdx = 0; treeIdx < currentRow.length; treeIdx++) {
       const currentTree = parseInt(currentRow[treeIdx], 10);
-      console.log('currentTree: ', currentTree);
+      // console.log('currentTree: ', currentTree);
 
       // Look 'North'
       let isVisibleFromNorth = true;
@@ -39,7 +39,7 @@ const countVisibleTrees = (input) => {
       // Look 'West'
       let isVisibleFromWest = true
       for (let westTreeIdx = treeIdx - 1; westTreeIdx >= 0; westTreeIdx--) {
-        console.log('west tree: ', currentRow[westTreeIdx])
+        // console.log('west tree: ', currentRow[westTreeIdx])
         
         if (
           currentRow[westTreeIdx] >= currentTree &&
@@ -69,4 +69,4 @@ const countVisibleTrees = (input) => {
 module.exports = { countVisibleTrees };
 
 // console.log('answer: ', countVisibleTrees(testInput)) // 21
-console.log('answer: ', countVisibleTrees(inputData))
+// console.log('answer: ', countVisibleTrees(inputData))
