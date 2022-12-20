@@ -1,4 +1,4 @@
-const inputData = `hqBqJsqHhHvhHHqlBvlfpHQQwLVzVwtVzjzttjQVSjMjwL
+export const inputData = `hqBqJsqHhHvhHHqlBvlfpHQQwLVzVwtVzjzttjQVSjMjwL
 gRTRnCRsFNGbTzLjwcSTMmSz
 dGgsRWPGdWgZJqBBqhfpPq
 HNCNJHCWJRRLqNJWlfrrrwsmlwGmmf

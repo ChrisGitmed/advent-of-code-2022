@@ -1,4 +1,4 @@
-const { inputData } = require('./input.ts');
+import { inputData } from './input.js';
 const testInput = `30373
 25512
 65332

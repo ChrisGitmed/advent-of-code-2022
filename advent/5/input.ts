@@ -1,4 +1,4 @@
-const inputData = `move 2 from 8 to 2
+export const inputData = `move 2 from 8 to 2
 move 3 from 9 to 2
 move 1 from 3 to 8
 move 5 from 1 to 7

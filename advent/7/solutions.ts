@@ -1,10 +1,10 @@
 // Part 1
-const sumDirSizes = (input) => {
+const sumDirSizes = (input:string) => {
   const instructions = input.split('\n');
   const cleanInstructions = instructions.filter((i) => i.slice(2, 4) !== 'ls' && i.slice(0, 3) !== 'dir');
 
-  const allDirs= { '/': { size: 0 } };
-  const currentDir=['/'];
+  const allDirs:any = { '/': { size: 0 } };
+  const currentDir:string[] =['/'];
   cleanInstructions.forEach((instruction) => {
     const { 0: first, 2: third} = instruction.split(' ');
     if(first === '$') {        
@@ -17,12 +17,12 @@ const sumDirSizes = (input) => {
       }
     }
     else {
-      const fileSize=parseInt(first);
-      const temp=[];        
+      const fileSize = parseInt(first);
+      const temp:any[] = [];        
       currentDir.forEach((dir) => {
         temp.push(dir);            
-        const temp2=temp.join('/');
-        allDirs[temp2].size+=fileSize;    
+        const temp2 = temp.join('/');
+        allDirs[temp2].size += fileSize;    
       });
     }
   });
@@ -33,11 +33,11 @@ const sumDirSizes = (input) => {
 }
 
 // Part 2
-const getSizeOfDirToDelete = (input) => {
+const getSizeOfDirToDelete = (input:string) => {
   const instructions = input.split('\n');
   const cleanInstructions = instructions.filter((i) => i.slice(2, 4) !== 'ls' && i.slice(0, 3) !== 'dir');
 
-  const allDirs= { '/': { size: 0 } };
+  const allDirs:any = { '/': { size: 0 } };
   const currentDir=['/'];
   cleanInstructions.forEach((instruction) => {
     const { 0: first, 2: third} = instruction.split(' ');
@@ -52,11 +52,11 @@ const getSizeOfDirToDelete = (input) => {
     }
     else {
       const fileSize=parseInt(first);
-      const temp=[];        
+      const temp:string[] = [];        
       currentDir.forEach((dir) => {
         temp.push(dir);            
-        const temp2=temp.join('/');
-        allDirs[temp2].size+=fileSize;    
+        const temp2 = temp.join('/');
+        allDirs[temp2].size += fileSize;    
       });
     }
   });

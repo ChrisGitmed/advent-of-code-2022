@@ -1,6 +1,5 @@
-const { inputData } = require('./input');
 // Part 1
-const getAssignmentPairs = (input) => {
+const getAssignmentPairs = (input:string) => {
   // Parse input
   const pairs = input.split('\n');
   let count = 0;
@@ -29,7 +28,7 @@ const getAssignmentPairs = (input) => {
 
 
 // Part 2
-const getOverlappingPairs = (input) => {
+const getOverlappingPairs = (input:string) => {
   const pairs = input.split('\n');
   let count = 0;
   for (const pair of pairs) {

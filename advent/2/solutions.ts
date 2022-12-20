@@ -1,6 +1,5 @@
-const { inputData } = require('./input');
 // Part 1
-const getTotalScore = (input) => {
+export const getTotalScore = (input:string) => {
   const split = input.split('\n');
 
   let score = 0
@@ -11,13 +10,11 @@ const getTotalScore = (input) => {
         if (str[0] === 'A') score += 3;
         if (str[0] === 'C') score += 6;
         break;
-
       case 'Y':
         score += 2
         if (str[0] === 'B') score += 3;
         if (str[0] === 'A') score += 6;
         break;
-
       case 'Z':
         score += 3
         if (str[0] === 'C') score += 3;
@@ -29,7 +26,7 @@ const getTotalScore = (input) => {
 };
 
 // Part 2
-const getTotalScore2 = (input) => {
+export const getTotalScore2 = (input:string) => {
   const split = input.split('\n');
 
   let score = 0;
@@ -54,5 +51,3 @@ const getTotalScore2 = (input) => {
   }
   return score;
 }
-
-module.exports = { getTotalScore, getTotalScore2 };

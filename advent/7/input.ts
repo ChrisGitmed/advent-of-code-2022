@@ -1,4 +1,4 @@
-const inputData = `$ cd /
+export const inputData = `$ cd /
 $ ls
 dir hdwsmn
 dir lmlsvqsw
