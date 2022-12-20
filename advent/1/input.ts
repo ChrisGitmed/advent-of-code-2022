@@ -1,4 +1,4 @@
-module.exports = `9524
+export const inputData = `9524
 12618
 6755
 2121

@@ -1,4 +1,4 @@
-const inputData = require('./input');
+const { inputData } = require('./input');
 // Part 1
 const getTotalScore = (input) => {
   const split = input.split('\n');
