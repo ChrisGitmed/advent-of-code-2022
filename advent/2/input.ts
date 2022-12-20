@@ -1,4 +1,4 @@
-module.exports = `B X
+export const inputData = `B X
 B Y
 A Y
 B Y

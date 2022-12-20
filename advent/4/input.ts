@@ -1,4 +1,4 @@
-const inputData = `91-93,6-92
+export const inputData = `91-93,6-92
 85-97,18-63
 15-99,16-98
 35-49,34-50

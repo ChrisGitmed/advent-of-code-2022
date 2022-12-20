@@ -1,6 +1,6 @@
 // Part 1
-const getTopCrates = (input) => {
-  const stacks = [
+export const getTopCrates = (input:string) => {
+  const stacks:any[] = [
     [],
     ['F', 'C', 'J', 'P', 'H', 'T', 'W'],
     ['G', 'R', 'V', 'F', 'Z', 'J', 'B', 'H'],
@@ -36,7 +36,7 @@ const getTopCrates = (input) => {
 }
 
 // Part 2
-const getTopCratesTwo = (input) => {
+export const getTopCratesTwo = (input:string) => {
   const stacks = [
     [],
     ['F', 'C', 'J', 'P', 'H', 'T', 'W'],
@@ -68,6 +68,3 @@ const getTopCratesTwo = (input) => {
   }
   return topCrates;
 }
-
-
-module.exports = { getTopCrates, getTopCratesTwo };
