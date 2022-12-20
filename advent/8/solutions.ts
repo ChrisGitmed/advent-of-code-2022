@@ -1,4 +1,4 @@
-const { inputData } = require('./input');
+const { inputData } = require('./input.ts');
 const testInput = `30373
 25512
 65332
@@ -6,16 +6,17 @@ const testInput = `30373
 35390`;
 
 // Part 1
-const countVisibleTrees = (input) => {
+const countVisibleTrees = (input: string) => {
   console.log('input:\n', input, '\n');
   const rows = input.split('\n');
   let countOfVisibleTrees = 0;
 
   // Loop over each row
-  rows.forEach((currentRow, rowNum) => {
+  rows.forEach((currentRow: string, rowNum: number) => {
     // console.log('currentRow: ', currentRow)
     for (let treeIdx = 0; treeIdx < currentRow.length; treeIdx++) {
-      const currentTree = parseInt(currentRow[treeIdx], 10);
+      // const currentTree:number = parseInt(currentRow[treeIdx], 10);
+      const currentTree:string = currentRow[treeIdx];
       // console.log('currentTree: ', currentTree);
 
       // Look 'North'
