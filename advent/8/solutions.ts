@@ -1,4 +1,4 @@
-import { inputData } from './input.js';
+import { inputData } from './input';
 const testInput = `30373
 25512
 65332
@@ -6,8 +6,8 @@ const testInput = `30373
 35390`;
 
 // Part 1
-const countVisibleTrees = (input: string) => {
-  console.log('input:\n', input, '\n');
+export const countVisibleTrees = (input: string) => {
+  // console.log('input:\n', input, '\n');
   const rows = input.split('\n');
   let countOfVisibleTrees = 0;
 
@@ -21,7 +21,10 @@ const countVisibleTrees = (input: string) => {
 
       // Look 'North'
       let isVisibleFromNorth = true;
+      console.log('rowNum: ', rowNum);
+      console.log('treeIdx: ', treeIdx);
       for (let prevRowNum = rowNum; prevRowNum > 0; prevRowNum--) {
+        console.log('prevRowNum: ', prevRowNum)
         if (
           rows[prevRowNum - 1][treeIdx] >= currentTree &&
           rows[prevRowNum - 1][treeIdx] !== '0'
@@ -66,8 +69,5 @@ const countVisibleTrees = (input: string) => {
 
 // Part 2
 
-
-module.exports = { countVisibleTrees };
-
-// console.log('answer: ', countVisibleTrees(testInput)) // 21
-// console.log('answer: ', countVisibleTrees(inputData))
+console.log('answer: ', countVisibleTrees(testInput)) // 21
+console.log('answer: ', countVisibleTrees(inputData))
