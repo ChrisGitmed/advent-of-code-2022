@@ -1,5 +1,5 @@
 // Part 1
-const getAssignmentPairs = (input:string) => {
+export const getAssignmentPairs = (input:string) => {
   // Parse input
   const pairs = input.split('\n');
   let count = 0;
@@ -28,7 +28,7 @@ const getAssignmentPairs = (input:string) => {
 
 
 // Part 2
-const getOverlappingPairs = (input:string) => {
+export const getOverlappingPairs = (input:string) => {
   const pairs = input.split('\n');
   let count = 0;
   for (const pair of pairs) {
@@ -44,5 +44,3 @@ const getOverlappingPairs = (input:string) => {
   }
   return count;
 }
-
-module.exports = { getAssignmentPairs, getOverlappingPairs };

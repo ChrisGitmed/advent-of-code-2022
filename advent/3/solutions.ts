@@ -13,7 +13,7 @@ const hash:any = {
 };
 
 // Part 1
-const sumOfPriorities = (input:string) => {
+export const sumOfPriorities = (input:string) => {
   const rucksacks = input.split('\n');
 
   let sum = 0;
@@ -33,7 +33,7 @@ const sumOfPriorities = (input:string) => {
 }
 
 // Part 2
-const sumOfBadgePriorities = (input:string) => {
+export const sumOfBadgePriorities = (input:string) => {
   const rucksacks = input.split('\n');
   
   const groups = [];
@@ -50,5 +50,3 @@ const sumOfBadgePriorities = (input:string) => {
   }
   return sum;
 }
-
-module.exports = { sumOfPriorities, sumOfBadgePriorities };

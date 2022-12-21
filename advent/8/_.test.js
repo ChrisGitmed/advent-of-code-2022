@@ -1,7 +1,7 @@
 const { test, expect } = require('@jest/globals');
 
-const { countVisibleTrees } = require('./solutions');
-const { inputData } = require('./input');
+const { countVisibleTrees } = require('./solutions.js');
+const { inputData } = require('./input.js');
 
 const testInput = `30373
 25512

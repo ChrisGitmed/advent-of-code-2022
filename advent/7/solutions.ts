@@ -1,5 +1,5 @@
 // Part 1
-const sumDirSizes = (input:string) => {
+export const sumDirSizes = (input:string) => {
   const instructions = input.split('\n');
   const cleanInstructions = instructions.filter((i) => i.slice(2, 4) !== 'ls' && i.slice(0, 3) !== 'dir');
 
@@ -33,7 +33,7 @@ const sumDirSizes = (input:string) => {
 }
 
 // Part 2
-const getSizeOfDirToDelete = (input:string) => {
+export const getSizeOfDirToDelete = (input:string) => {
   const instructions = input.split('\n');
   const cleanInstructions = instructions.filter((i) => i.slice(2, 4) !== 'ls' && i.slice(0, 3) !== 'dir');
 
@@ -51,7 +51,7 @@ const getSizeOfDirToDelete = (input:string) => {
       }
     }
     else {
-      const fileSize=parseInt(first);
+      const fileSize = parseInt(first);
       const temp:string[] = [];        
       currentDir.forEach((dir) => {
         temp.push(dir);            
@@ -68,5 +68,3 @@ const getSizeOfDirToDelete = (input:string) => {
   }
   return closestSize;
 }
-
-module.exports = { sumDirSizes, getSizeOfDirToDelete };
