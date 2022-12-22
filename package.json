@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "jest": "^29.3.1"
   },

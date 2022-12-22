@@ -1,4 +1,4 @@
-import { inputData } from './input';
+import { inputData } from './input.js';
 const testInput = `30373
 25512
 65332
@@ -7,24 +7,24 @@ const testInput = `30373
 
 // Part 1
 export const countVisibleTrees = (input: string) => {
-  // console.log('input:\n', input, '\n');
+  console.log('input:\n', input, '\n');
   const rows = input.split('\n');
   let countOfVisibleTrees = 0;
 
   // Loop over each row
   rows.forEach((currentRow: string, rowNum: number) => {
-    // console.log('currentRow: ', currentRow)
+    console.log('currentRow: ', currentRow)
     for (let treeIdx = 0; treeIdx < currentRow.length; treeIdx++) {
       // const currentTree:number = parseInt(currentRow[treeIdx], 10);
       const currentTree:string = currentRow[treeIdx];
-      // console.log('currentTree: ', currentTree);
+      console.log('currentTree: ', currentTree);
 
       // Look 'North'
       let isVisibleFromNorth = true;
-      console.log('rowNum: ', rowNum);
-      console.log('treeIdx: ', treeIdx);
+      // console.log('rowNum: ', rowNum);
+      // console.log('treeIdx: ', treeIdx);
       for (let prevRowNum = rowNum; prevRowNum > 0; prevRowNum--) {
-        console.log('prevRowNum: ', prevRowNum)
+        // console.log('prevRowNum: ', prevRowNum)
         if (
           rows[prevRowNum - 1][treeIdx] >= currentTree &&
           rows[prevRowNum - 1][treeIdx] !== '0'
@@ -70,4 +70,4 @@ export const countVisibleTrees = (input: string) => {
 // Part 2
 
 console.log('answer: ', countVisibleTrees(testInput)) // 21
-console.log('answer: ', countVisibleTrees(inputData))
+console.log('answer: ', countVisibleTrees(inputData)) // 
