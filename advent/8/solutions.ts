@@ -64,47 +64,35 @@ export const getLargestScenicScore = (input: string) => {
       // Find north score
       let northScore = 0;
       for (let prevRowNum = rowNum - 1; prevRowNum >= 0; prevRowNum--) {
+        northScore += 1;
         const previousRow = rows[prevRowNum];
         const compareTree = previousRow[treeIdx];
-        if (compareTree >= currentTree) {
-          northScore += 1;
-          break;
-        }
-        northScore += 1;
+        if (compareTree >= currentTree) break;
       }
 
       // Find east score
       let eastScore = 0;
       for (let eastTreeIdx = treeIdx + 1; eastTreeIdx < currentRow.length; eastTreeIdx++) {
-        const compareTree = currentRow[eastTreeIdx];
-        if (compareTree >= currentTree) {
-          eastScore += 1;
-          break;
-        }
         eastScore += 1;
+        const compareTree = currentRow[eastTreeIdx];
+        if (compareTree >= currentTree) break;
       }
 
       // Find south score
       let southScore = 0;
       for (let nextRowNum = rowNum + 1; nextRowNum < rows.length; nextRowNum++) {
+        southScore += 1;
         const nextRow = rows[nextRowNum];
         const compareTree = nextRow[treeIdx];
-        if (compareTree >= currentTree) {
-          southScore += 1;
-          break;
-        };
-        southScore += 1;
+        if (compareTree >= currentTree) break;
       }
 
       // Find west score
       let westScore = 0;
       for (let westTreeIdx = treeIdx - 1; westTreeIdx >= 0; westTreeIdx--) {
+        westScore += 1
         const compareTree = currentRow[westTreeIdx];
-        if (compareTree >= currentTree) {
-          westScore += 1;
-          break;
-        };
-        westScore += 1;
+        if (compareTree >= currentTree) break;
       }
 
       const totalScore = northScore * eastScore * southScore * westScore;
